@@ -28,7 +28,7 @@ class WorkOrder(models.Model):
     cust_number = models.CharField(max_length=10)
     cust_name = models.CharField(max_length=50)
     job_type = models.CharField(max_length=10, choices=JOB_TYPES)
-    pair_day = models.BooleanField(required=false)
-    extra_charges = models.DecimalField()
+    pair_day = models.NullBooleanField()
+    extra_charges = models.IntegerField()
     description = models.TextField()
     
