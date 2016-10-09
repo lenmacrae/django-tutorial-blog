@@ -1,9 +1,9 @@
 {% extends 'blog/base.html' %}
 
 {% block content %}
-    {% for post in posts %}
+    {% for job in jobs %}
         <div class="jobs">
-            jobs go here
+            <p><b>Date:</b> {{ job.job_date }} <b>Customer:</b> {{ job.cust_number }} - {{ job.cust_name }} - <b>Job:</b> {{ job.job_type }} - {{ job.description }} - {{ job.extra_charges }}</p>
         </div>
     {% endfor %}
 {% endblock %}

@@ -24,7 +24,7 @@ class WorkOrder(models.Model):
     htv = 'htv'
     JOB_TYPES = ((fix, 'fix'), (convert, 'convert'), (lte, 'install/move'), (htv, 'sat install'))
 
-    job_date = models.DateTimeField(blank=True, null=True)
+    job_date = models.CharField(max_length=20)
     cust_number = models.CharField(max_length=10)
     cust_name = models.CharField(max_length=50)
     job_type = models.CharField(max_length=10, choices=JOB_TYPES)
