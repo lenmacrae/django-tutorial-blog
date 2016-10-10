@@ -45,3 +45,15 @@ def work_orders(request):
     jobs = WorkOrder.objects.filter(job_date__lte=timezone.now()).order_by('job_date')
     return render(request, 'blog/work_orders.html', {'jobs': jobs})
 
+def work_new(request):
+    if request.method == "POST":
+        form = PostForm(request.POST)
+        if form.is_valid():
+            job = form.save(commit=False)
+            job.save()
+            return render(request, 'blog/work_orders.html')
+    else:
+        form = PostForm()
+
+    return render(request, 'blog/work_orders.html')
+

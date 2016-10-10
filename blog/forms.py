@@ -11,4 +11,4 @@ class PostForm(forms.ModelForm):
 class  JobForm(forms.ModelForm):
     class Meta:
         model = WorkOrder
-        fields = ('job_date', 'cust_number', 'cust_name', 'job_type', 'description', 'extra_charges')
+        fields = ('job_date', 'cust_number', 'cust_name', 'job_pay', 'description', 'extra_charges')

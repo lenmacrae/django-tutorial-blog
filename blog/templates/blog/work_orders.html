@@ -1,9 +1,11 @@
 {% extends 'blog/base.html' %}
 
 {% block content %}
+
+<a href='job_new.html'>Add new work order</a>
     {% for job in jobs %}
         <div class="jobs">
-            <p><b>Date:</b> {{ job.job_date }} <b>Customer:</b> {{ job.cust_number }} - {{ job.cust_name }} - <b>Job:</b> {{ job.job_type }} - {{ job.description }} - {{ job.extra_charges }}</p>
+            <p><b>Date:</b> {{ job.job_date }} <b>Customer:</b> {{ job.cust_number }} - {{ job.cust_name }} - <b>Job:</b> {{ job.job_pay }} - {{ job.extra_charges } - {{ job.description }}</p>
         </div>
     {% endfor %}
 {% endblock %}
